@@ -6206,7 +6206,7 @@ blink {
 
 body {
   -webkit-font-smoothing: none;
-  background: #0000ff url('../img/microfab.gif') top left;
+  background: #000 url('../img/wallpaper.gif') top left;
 }
 
 .navbar {

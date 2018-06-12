@@ -2,6 +2,6 @@
   text-align: center;
 }
 
-body input[type="text"] {
+body input[type="text"], body textarea {
   color: white;
 }

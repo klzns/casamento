@@ -19,6 +19,7 @@ export default {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap-responsive.css" />
+        <title>Casamento de Brelisa</title>
       </Head>
       <Body>{children}</Body>
     </Html>

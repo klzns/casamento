@@ -67,7 +67,12 @@ class Home extends Component {
 
           <label>
             Nome e sobrenome <br />
-            <input type="text" />
+            <input type="text" name="name" />
+          </label>
+
+          <label>
+            Mensagem para os noivos <br />
+            <textarea name="message"></textarea>
           </label>
 
           <div style={{ textAlign: 'left' }}>

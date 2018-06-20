@@ -35,7 +35,7 @@ export default {
     {
       path: '/presentes',
       component: 'src/containers/Presentes',
-      getData: () => ({ gifts }),
+      // getData: () => ({ gifts }),
     },
     {
       is404: true,

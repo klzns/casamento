@@ -5,11 +5,13 @@ import PayPalButton from './PayPalButton'
 class Product extends Component {
   render () {
     return (
-      <div>
-        <img src={`/imgs/products/${this.props.image}`} />
+      <div className="gift">
+        <div className="img-container">
+          <img src={`/imgs/products/${this.props.image}`} />
+        </div>
         <h4>{this.props.name}</h4>
         <p><strong>R$ {this.props.price}</strong></p>
-        
+
         <PayPalButton {...this.props} />
       </div>
     )

@@ -1,6 +1,4 @@
 import React from 'react'
-import axios from 'axios'
-import gifts from './gifts'
 
 export default {
   Document: (
@@ -21,7 +19,11 @@ export default {
         <link rel="stylesheet" type="text/css" href="/vendor/css/bootstrap-responsive.css" />
         <title>Casamento de Brelisa</title>
       </Head>
-      <Body>{children}</Body>
+      <Body>
+        {children}
+        <script src="https://cdn.polyfill.io/v2/polyfill.js?features=default,fetch" />
+        <script src="/vendor/js/formdata-polyfill.min.js" />
+      </Body>
     </Html>
   ),
   getSiteData: () => ({
@@ -35,7 +37,6 @@ export default {
     {
       path: '/presentes',
       component: 'src/containers/Presentes',
-      // getData: () => ({ gifts }),
     },
     {
       is404: true,

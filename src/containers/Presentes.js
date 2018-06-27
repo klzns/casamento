@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const gifts = [
   [
     {
-      name: 'Jantar romântico',
+      name: 'Jantar romântico típico',
       price: 200,
       image: 'dinner2.jpg',
     },
@@ -17,27 +17,44 @@ const gifts = [
     },
     {
       name: 'Café da manhã na praia',
-      price: 170,
+      price: 90,
       image: 'cafedamanha.jpeg',
     },
-    {
-      name: 'Gelato na Fontana di Trevi ',
-      price: 55,
-      image: 'sorvete.jpg',
-    }
-  ],
-  [
     {
       name: '2 entradas para o Coliseu',
       price: 170,
       image: 'coliseu.jpeg',
     },
+  ],
+  [
     {
-      name: 'Pizza de rua',
-      price: 40,
+      name: '1 passagem de barca para Sardenha',
+      price: 560,
+      image: 'ferry.jpeg',
+    },
+    {
+      name: 'Pizza de rua bem italiana',
+      price: 48,
       image: 'pizza.jpeg',
     },
-  ]
+    {
+      name: '2 passagens de trem',
+      price: 220,
+      image: 'train.jpeg',
+    },
+    {
+      name: '1 passagem de avião',
+      price: 3100,
+      image: 'aviao.jpg',
+    },
+  ],
+  [
+    {
+      name: 'Mergulho em Sardenha',
+      price: 410,
+      image: 'scuba.jpg',
+    },
+  ],
 ]
 
 class Presentes extends Component {
@@ -51,6 +68,10 @@ class Presentes extends Component {
           </h1>
 
           <hr />
+
+          <div className="row">
+            <p className="span6">Nós vamos passar nossa lua de mel na Itália! Você pode ajudar a gente com algumas coisas que com certeza vão tornar essa viagem muito especial.</p>
+          </div>
 
           {gifts.map((line, index) =>
             <div className="row" key={index}>

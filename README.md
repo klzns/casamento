@@ -1,10 +1,5 @@
-# React-Static - Basic Example
+# Casamento
 
-This example is the most basic version of react-static available. It includes:
-- Babel
-- CSS imports
-- Image imports
-- File imports
-- Automatic Routing
+Site do meu casamento.
 
-To get started, run `react-static create` and use the `basic` template.
+⚠️ Não julge esse código!! 😡

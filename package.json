@@ -7,6 +7,7 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
+    "deploy": "yarn build && gh-pages -d dist",
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
+    "gh-pages": "^1.2.0",
     "serve": "^6.1.0"
   }
 }

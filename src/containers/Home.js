@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer'
-import RSVP from '../components/RSVP'
 import HeaderHome from '../components/HeaderHome'
 import Marquee from '../components/Marquee'
 import InfoLocal from '../components/InfoLocal'
 import BannerPresente from '../components/BannerPresente'
 
 class Home extends Component {
-  render () {
+  render() {
     return (
       <div>
         <HeaderHome />
@@ -17,8 +16,7 @@ class Home extends Component {
         <br /> <br />
 
         <div className="row-fluid">
-          <div className="span3 offset1">
-            <RSVP />
+          <div className="span2">
           </div>
 
           <div className="span4">

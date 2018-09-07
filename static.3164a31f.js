@@ -511,8 +511,23 @@ var Presentes = function (_Component) {
               'p',
               { className: 'span6' },
               'N\xF3s vamos passar nossa lua de mel na It\xE1lia! Voc\xEA pode ajudar a gente com algumas coisas que com certeza v\xE3o tornar essa viagem muito especial.'
+            ),
+            _react2.default.createElement(
+              'p',
+              { className: 'span6' },
+              'Caso o PayPal d\xEA problema, voc\xEA pode depositar na conta: ',
+              _react2.default.createElement('br', null),
+              'Itau Unibanco S.A. ',
+              _react2.default.createElement('br', null),
+              'Ag\xEAncia 3830',
+              _react2.default.createElement('br', null),
+              'Conta 02958-7',
+              _react2.default.createElement('br', null),
+              'CPF 012.395.261-13',
+              _react2.default.createElement('br', null)
             )
           ),
+          _react2.default.createElement('div', { className: 'row' }),
           gifts.map(function (line, index) {
             return _react2.default.createElement(
               'div',
@@ -728,7 +743,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/Home',
-  file: '/Users/breno/Projects/casamento/dist/react-static-routes.js',
+  file: '/home/elisa/Projetos/casamento/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 5)), (0, _importCss3.default)('src/containers/Home', {
       disableWarnings: true
@@ -748,7 +763,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/Presentes',
-  file: '/Users/breno/Projects/casamento/dist/react-static-routes.js',
+  file: '/home/elisa/Projetos/casamento/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 7)), (0, _importCss3.default)('src/containers/Presentes', {
       disableWarnings: true
@@ -768,7 +783,7 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_2 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/404',
-  file: '/Users/breno/Projects/casamento/dist/react-static-routes.js',
+  file: '/home/elisa/Projetos/casamento/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 8)), (0, _importCss3.default)('src/containers/404', {
       disableWarnings: true
@@ -1019,9 +1034,13 @@ function universal(component) {
           return Promise.reject(error);
         }
 
-        if (Component) return Promise.resolve(Component);
-
-        return requireAsync(props, context);
+        return Promise.resolve().then(function () {
+          if (Component) return Component;
+          return requireAsync(props, context);
+        }).then(function (Component) {
+          (0, _hoistNonReactStatics2.default)(UniversalComponent, Component, { preload: true });
+          return Component;
+        });
       }
     }]);
 
@@ -2004,6 +2023,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var Info = function Info(_ref) {
+  var children = _ref.children;
+  return _react2.default.createElement(
+    _react.Fragment,
+    null,
+    _react2.default.createElement(
+      'strong',
+      { style: { color: 'blue' } },
+      children
+    ),
+    _react2.default.createElement('br', null)
+  );
+};
+
 var InfoLocal = function (_Component) {
   _inherits(InfoLocal, _Component);
 
@@ -2020,12 +2053,10 @@ var InfoLocal = function (_Component) {
         'p',
         null,
         _react2.default.createElement(
-          'strong',
-          { style: { color: 'blue' } },
+          Info,
+          null,
           'Local:'
         ),
-        ' ',
-        _react2.default.createElement('br', null),
         _react2.default.createElement(
           'a',
           { href: 'https://goo.gl/maps/SMMfdnm5DG92' },
@@ -2038,31 +2069,37 @@ var InfoLocal = function (_Component) {
         'Rio de Janeiro - RJ, 23020-010 ',
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'strong',
-          { style: { color: 'blue' } },
+          Info,
+          null,
           'Dia e hora:'
         ),
-        ' ',
-        _react2.default.createElement('br', null),
         '08/09/2018 \xE0s 16h ',
         _react2.default.createElement('br', null),
+        '(demora 1h15 pra chegar da Zona Sul at\xE9 l\xE1)',
+        _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'strong',
-          { style: { color: 'blue' } },
+          Info,
+          null,
           'Traje:'
         ),
-        ' ',
-        _react2.default.createElement('br', null),
         'Vai bem bonitinho ',
         _react2.default.createElement('br', null),
         _react2.default.createElement(
-          'strong',
-          { style: { color: 'blue' } },
+          Info,
+          null,
+          'Transporte:'
+        ),
+        'As vans contratadas est\xE3o lotadas. ',
+        _react2.default.createElement('br', null),
+        'Uma boa op\xE7\xE3o \xE9 ir de Uber e agendar a volta no Uber pras 22h40, hor\xE1rio do fim da festa. ',
+        _react2.default.createElement('br', null),
+        _react2.default.createElement(
+          Info,
+          null,
           'Importante!'
         ),
-        ' ',
-        _react2.default.createElement('br', null),
-        'Levar o convite para apresentar na entrada!'
+        'Levar o convite para apresentar na entrada!',
+        _react2.default.createElement('br', null)
       );
     }
   }]);
@@ -2265,11 +2302,101 @@ function PayPalButton(_ref) {
 
 /***/ }),
 /* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(31)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".center{text-align:center}body input[type=text],body textarea{color:#fff}.gift{margin-bottom:40px}.gift h4{height:2em}.gift .img-container{height:90px;display:-ms-flexbox;display:flex;-ms-flex-align:end;align-items:flex-end;-ms-flex-pack:center;justify-content:center}.gift .img-container img{max-height:80px;max-width:120px}.paypal-button{text-align:center}.paypal-button .add-to-cart{width:100%;max-width:188px}.paypal-button img{width:0;height:0}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 31 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.1a13ea45.js.map
+//# sourceMappingURL=static.3164a31f.js.map

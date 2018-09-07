@@ -58,11 +58,11 @@ const gifts = [
 ]
 
 class Presentes extends Component {
-  render () {
+  render() {
     return (
       <div className="container">
         <center>
-          
+
           <h1>
             <Link to="/"><img src="/gifs/back.gif" /></Link> Lista de presentes
           </h1>
@@ -71,6 +71,16 @@ class Presentes extends Component {
 
           <div className="row">
             <p className="span6">Nós vamos passar nossa lua de mel na Itália! Você pode ajudar a gente com algumas coisas que com certeza vão tornar essa viagem muito especial.</p>
+            <p className="span6">Caso o PayPal dê problema, você pode depositar na conta: <br />
+              Itau Unibanco S.A. <br />
+              Agência 3830<br />
+              Conta 02958-7<br />
+              CPF 012.395.261-13<br />
+            </p>
+          </div>
+
+          <div className="row">
+
           </div>
 
           {gifts.map((line, index) =>

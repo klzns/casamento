@@ -257,23 +257,19 @@ var _Footer = __webpack_require__(6);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _RSVP = __webpack_require__(22);
-
-var _RSVP2 = _interopRequireDefault(_RSVP);
-
-var _HeaderHome = __webpack_require__(24);
+var _HeaderHome = __webpack_require__(22);
 
 var _HeaderHome2 = _interopRequireDefault(_HeaderHome);
 
-var _Marquee = __webpack_require__(25);
+var _Marquee = __webpack_require__(23);
 
 var _Marquee2 = _interopRequireDefault(_Marquee);
 
-var _InfoLocal = __webpack_require__(26);
+var _InfoLocal = __webpack_require__(24);
 
 var _InfoLocal2 = _interopRequireDefault(_InfoLocal);
 
-var _BannerPresente = __webpack_require__(27);
+var _BannerPresente = __webpack_require__(25);
 
 var _BannerPresente2 = _interopRequireDefault(_BannerPresente);
 
@@ -309,11 +305,7 @@ var Home = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'row-fluid' },
-          _react2.default.createElement(
-            'div',
-            { className: 'span3 offset1' },
-            _react2.default.createElement(_RSVP2.default, null)
-          ),
+          _react2.default.createElement('div', { className: 'span2' }),
           _react2.default.createElement(
             'div',
             { className: 'span4' },
@@ -421,7 +413,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactStatic = __webpack_require__(2);
 
-var _Product = __webpack_require__(28);
+var _Product = __webpack_require__(26);
 
 var _Product2 = _interopRequireDefault(_Product);
 
@@ -653,7 +645,7 @@ var _reactStaticRoutes = __webpack_require__(13);
 
 var _reactStaticRoutes2 = _interopRequireDefault(_reactStaticRoutes);
 
-__webpack_require__(30);
+__webpack_require__(28);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1524,146 +1516,6 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _axios = __webpack_require__(23);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var RSVP = function (_Component) {
-  _inherits(RSVP, _Component);
-
-  function RSVP(props) {
-    _classCallCheck(this, RSVP);
-
-    var _this = _possibleConstructorReturn(this, (RSVP.__proto__ || Object.getPrototypeOf(RSVP)).call(this, props));
-
-    _this.handleSubmit = function (e) {
-      e.preventDefault();
-
-      var scriptURL = 'https://script.google.com/macros/s/AKfycbx9CHi9wtra91pugYuwoH7dp_47pxrCBvH8fBVlSFzca51F0FRZ/exec';
-
-      var form = document.forms.rsvp;
-      var formData = new FormData(form);
-      fetch(scriptURL, { method: 'POST', body: formData }).then(function () {
-        return _this.setState({ success: true });
-      }).catch(function () {
-        return _this.setState({ error: true });
-      });
-    };
-
-    _this.state = { success: null, error: null };
-    return _this;
-  }
-
-  _createClass(RSVP, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'form',
-        { className: 'form', id: 'rsvp', style: { padding: '0 20px', textAlign: 'center' }, onSubmit: this.handleSubmit },
-        _react2.default.createElement(
-          'h2',
-          null,
-          'RSVP'
-        ),
-        _react2.default.createElement(
-          'label',
-          null,
-          'Nome e sobrenome ',
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('input', { type: 'text', name: 'nome' })
-        ),
-        _react2.default.createElement(
-          'label',
-          null,
-          'Mensagem para os noivos ',
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('textarea', { name: 'mensagem' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { style: { textAlign: 'left' } },
-          _react2.default.createElement(
-            'label',
-            { className: 'radio' },
-            _react2.default.createElement('input', { type: 'radio', name: 'vai', value: 'true', defaultChecked: true }),
-            'Vou'
-          ),
-          _react2.default.createElement(
-            'label',
-            { className: 'radio' },
-            _react2.default.createElement('input', { type: 'radio', name: 'vai', value: 'false' }),
-            'N\xE3o vou'
-          )
-        ),
-        _react2.default.createElement(
-          'button',
-          { type: 'submit', className: 'btn btn-primary' },
-          'Enviar'
-        ),
-        this.state.success && _react2.default.createElement(
-          'div',
-          { className: 'alert alert-success' },
-          'Enviado!'
-        ),
-        this.state.error && _react2.default.createElement(
-          'div',
-          { className: 'alert alert-danger' },
-          'Opa! Ocorreu um erro! Avisa pro Breno!'
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('img', { src: '/gifs/mchammer.gif' }),
-          _react2.default.createElement('img', { src: '/gifs/mchammer.gif' }),
-          _react2.default.createElement('img', { src: '/gifs/mchammer.gif' })
-        )
-      );
-    }
-  }]);
-
-  return RSVP;
-}(_react.Component);
-
-RSVP.propTypes = {};
-
-exports.default = RSVP;
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(1);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1926,7 +1778,7 @@ HeaderHome.propTypes = {};
 exports.default = HeaderHome;
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1995,7 +1847,7 @@ Marquee.propTypes = {};
 exports.default = Marquee;
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2112,7 +1964,7 @@ InfoLocal.propTypes = {};
 exports.default = InfoLocal;
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2173,7 +2025,7 @@ var BannerPresente = function (_Component) {
 exports.default = BannerPresente;
 
 /***/ }),
-/* 28 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2193,7 +2045,7 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _PayPalButton = __webpack_require__(29);
+var _PayPalButton = __webpack_require__(27);
 
 var _PayPalButton2 = _interopRequireDefault(_PayPalButton);
 
@@ -2256,7 +2108,7 @@ Product.propTypes = {
 exports.default = Product;
 
 /***/ }),
-/* 29 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2301,10 +2153,10 @@ function PayPalButton(_ref) {
 }
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(31)(false);
+exports = module.exports = __webpack_require__(29)(false);
 // imports
 
 
@@ -2315,7 +2167,7 @@ exports.push([module.i, ".center{text-align:center}body input[type=text],body te
 
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, exports) {
 
 /*
@@ -2399,4 +2251,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.3164a31f.js.map
+//# sourceMappingURL=static.f42913a4.js.map
